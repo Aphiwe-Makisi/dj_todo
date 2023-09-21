@@ -41,10 +41,25 @@ body, html {
 }
 
 input {
+    height: 30px;
+}
+
+textarea {
+    height: 100px;
+}
+
+input, textarea {
     border: none;
     outline: none;
     border: 1px solid #eee;
-    /* border-radius: 5px; */
-    height: 30px;
     width: 100%;
+}
+
+
+
+.todo-form {
+    max-width: 800px;
+    background-color: rgba(98, 255, 203, 0.3);
+    padding: 10px;
+    margin: 0 auto;
 }

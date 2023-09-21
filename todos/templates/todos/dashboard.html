@@ -1,5 +1,32 @@
 {% extends 'todos/base.html' %}
 
 {% block content %}
-  <h1>Dashboard</h1>
+  <div class="container">
+    <h1 class="text-center mt-3">Welcome, {{ user.first_name }}&nbsp;👋</h1>
+    <hr>  
+
+    <div class="wrapper bg-light p-4">
+      <form class="todo-form shadow-sm" action="" method="post">
+        {% csrf_token %}
+        <h2>Add new todo</h2>
+        <hr>
+        
+        {{form}}
+        
+        <div class="text-center mt-2">
+          <button type="submit" class="btn btn-primary"><i class="fa-solid fa-floppy-disk"></i>&nbsp; Save</button>
+        </div>
+      </form>
+
+      <div>
+        {% if todos.count == 0 %}
+          <h3 class="text-center text-warning mt-3">You don't have any todo items yet.</h3>
+        {% endif %}
+      </div>
+
+      <div >
+
+      </div>
+    </div>
+  </div>
 {% endblock content %}<h1>Dashboard</h1>
