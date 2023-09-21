@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box !important;
+    object-fit: contain !important;
+}
+
+body, html {
+    height: 100vh;
+}
+
+.auth-form {
+    width: 500px;
+    max-width: 500px;
+}
+
+input {
+    border: none;
+    outline: none;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    height: 30px;
+    width: 100%;
+}
