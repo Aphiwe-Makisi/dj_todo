@@ -1,16 +1,16 @@
 from django.shortcuts import redirect, render
 from django.contrib.auth.forms import AuthenticationForm
-from django.contrib.auth import authenticate
+from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
-from todos.forms import RegistrationForm
+from todos.forms import RegistrationForm, LoginForm
 
 # Create your views here.
 def home(request):
   return render(request, "todos/home.html")
 
-@login_required
+@login_required(login_url="todos:login")
 def dashboard(request):
-  return render(request, "")
+  return render(request, "todos/dashboard.html")
 
 def register(request):
   if request.method == "POST":

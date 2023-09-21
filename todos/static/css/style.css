@@ -14,11 +14,37 @@ body, html {
     max-width: 500px;
 }
 
+.login-form input {
+    height: 45px;
+    padding-left: 50px;
+}
+
+.login-form-group {
+    border-radius: 6px;
+    position: relative;
+    overflow: hidden;
+}
+
+.icon-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.error-list li {
+    display: none;
+}
+
 input {
     border: none;
     outline: none;
     border: 1px solid #eee;
-    border-radius: 5px;
+    /* border-radius: 5px; */
     height: 30px;
     width: 100%;
 }
