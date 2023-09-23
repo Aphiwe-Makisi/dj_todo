@@ -23,6 +23,7 @@ class LoginForm(AuthenticationForm):
 class TodoForm(forms.ModelForm):
 
     description = forms.CharField(required=True, widget=forms.Textarea)
+    due_date = forms.DateTimeField(widget=forms.DateTimeInput(attrs={"type": "date", "class": "date-picker"}))
     class Meta:
         model = Todo
         fields = ["title", "description", "due_date"]

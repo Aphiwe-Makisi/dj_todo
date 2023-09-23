@@ -1,0 +1,31 @@
+{% extends 'todos/base.html' %}
+
+{% block content %}
+  <form class="todo-form shadow-sm mt-5" action="" method="post">
+  {% csrf_token %}
+  <h2 class="text-center">Add new todo</h2>
+  <hr>
+  <div class="row">
+    <div class="col-6">
+      {{form.title.label_tag}}
+      {{form.title}}
+      {{ form.title.errors }}
+    </div>
+    <div class="col-6">
+      {{ form.due_date.label_tag }}
+      {{ form.due_date }}
+      {{ form.due_date.errors }}
+    </div>
+  </div>
+
+  <div class="mt-3">
+    {{ form.description.label_tag }}
+    {{ form.description }}
+  </div>
+  
+  <div class="text-center mt-2">
+    <button type="submit" class="btn btn-primary"><i class="fa-solid fa-floppy-disk"></i>&nbsp; Save</button>
+    <a href="{% url 'todos:dashboard' %}" class="btn btn-outline-warning"><i class="fa-solid fa-arrow-left"></i>&nbsp; Back</a>
+  </div>
+</form>
+{% endblock content %}

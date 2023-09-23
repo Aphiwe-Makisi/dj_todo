@@ -1,34 +1,38 @@
 {% extends 'todos/base.html' %}
 
 {% block content %}
-<div class="container d-flex justify-content-center">
-    <div class="bg-light p-4 rounded shadow-sm mt-5 auth-form login-form">
-        <form class="flex-column" action="" method="post" autocomplete="off">
-            {% csrf_token %}
-            <h2 class="text-center">Login to your account</h2>
-            <hr>
-            {% if form.non_field_errors %}
-                <div class="alert alert-danger p-1 mb-1">
-                    {{ form.non_field_errors }}
+    <div class="container d-flex justify-content-center">
+        <div class="bg-light p-4 rounded shadow-sm mt-5 auth-form login-form">
+            <form class="flex-column" action="" method="post" autocomplete="off">
+                {% csrf_token %}
+                <h2 class="text-center">Login to your account</h2>
+                <hr>
+                {% if form.non_field_errors %}
+                    <div class="alert alert-danger p-1 mb-1">
+                        {{ form.non_field_errors }}
+                    </div>
+                {% endif %}
+                <div class="login-form-group mt-2">
+                    <div class="icon-container bg-primary text-white">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                    {{ form.username }}
+                    
                 </div>
-            {% endif %}
-            <div class="login-form-group mt-2">
-                <div class="icon-container bg-primary text-white">
-                    <i class="fa-solid fa-user"></i>
+                <div class="login-form-group mt-2">
+                    <div class="icon-container bg-primary text-white">
+                        <i class="fa-solid fa-lock"></i>
+                    </div>
+                    {{ form.password }}
                 </div>
-                {{ form.username }}
-                
-            </div>
-            <div class="login-form-group mt-2">
-                <div class="icon-container bg-primary text-white">
-                    <i class="fa-solid fa-lock"></i>
+                <div class="text-center mt-3">
+                    <button type="submit" class="btn btn-primary"><i class="fa-solid fa-lock-open"></i>&nbsp;&nbsp;Create account</button>
                 </div>
-                {{ form.password }}
-            </div>
+            </form>
+            
             <div class="text-center mt-3">
-                <button type="submit" class="btn btn-primary"><i class="fa-solid fa-lock-open"></i>&nbsp;&nbsp;Create account</button>
+                Don't have an account yet? <strong><a href="{% url 'todos:register' %}">Register</a></strong>
             </div>
-        </form>
+        </div>
     </div>
-</div>
 {% endblock content %}<h1>Login</h1>
