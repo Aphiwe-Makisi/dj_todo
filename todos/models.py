@@ -9,7 +9,6 @@ class Todo(models.Model):
   date_created = models.DateTimeField(auto_now_add=True, null=True)
   date_updated = models.DateTimeField(auto_now=True, null=True)
   due_date = models.DateTimeField(null=True)
-  is_completed = models.BooleanField(default=False, null=True)
 
   def __str__(self):
     return self.title
