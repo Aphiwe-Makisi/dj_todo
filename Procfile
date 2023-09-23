@@ -1,1 +1,1 @@
-web gunicorn mysite.wsgi:appliacation --log-file -
+web gunicorn dj_todo.wsgi:appliacation --log-file -
