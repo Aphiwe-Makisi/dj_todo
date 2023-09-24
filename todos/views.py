@@ -57,6 +57,14 @@ def delete_todo(request, id):
   todo.delete()
   return redirect("todos:dashboard")
 
+@login_required(login_url="todos:login")
+def profile(request, id):
+  return render(request, "todos/profile.html")
+
+@login_required(login_url="todos:login")
+def update_profile(request, id):
+  return render(request, "todos/update_profile.html")
+
 def register(request):
   if request.method == "POST":
     form = RegistrationForm(request.POST)

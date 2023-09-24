@@ -72,3 +72,28 @@ input, textarea {
 .date-picker {
     width: 100%;
 }
+
+.profile-pic {
+    width: 100%;
+}
+
+.img-container {
+    max-width: 200px;
+    max-height: 200px;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.card {
+    width: 500px;
+    max-width: 500px;
+}
+
+.profile-container {
+    height: calc(100vh - 74.39px);
+}

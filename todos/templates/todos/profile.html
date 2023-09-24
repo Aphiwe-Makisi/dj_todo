@@ -1,0 +1,20 @@
+{% extends 'todos/base.html' %}
+{% load static %}
+
+{% block content %}
+  <div class="container profile-container d-flex justify-content-center align-items-center">
+      <div class="card d-flex justify-content-center p-3 shadow">
+        <div class="container-fluid img-container">
+          <img class="img-fluid profile-pic" src="{% static 'images/default_pic.png' %}" alt="default profile picture">
+          
+        </div>
+        <hr>
+        <div class="text-center">
+          <h1>{{ user.first_name }} {{ user.last_name }}</h1>
+        <p>{{user.username}}</p>
+        </div>
+        <a href="{% url 'todos:update_profile' user.id %}" class="btn btn-secondary w-100">Edit Profile</a>
+        <a href="{% url 'todos:dashboard' %}" class="btn btn-outline-success mt-2"><i class="fa-solid fa-arrow-left"></i>&nbsp; Back home</a>
+      </div>
+  </div>
+{% endblock content %}
