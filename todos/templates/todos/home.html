@@ -1,5 +1,18 @@
 {% extends 'todos/base.html' %}
 
 {% block content %}
-  <h1 class="mt-5 text-center">This is Home page</h1>
+<!-- <section> -->
+  <div class="skewed"></div>
+
+  <div class="container d-flex justify-content-center">
+    <div class="card home-card p-3">
+      <div class="text-center">
+        <h1>Hi, welcome 👋</h1>
+        <hr>
+        <h3>Want a free tool to record your todos?</h3>
+      </div>
+      <hr>
+      <a href="{% url 'todos:register' %}" class="btn btn-outline-primary">Create an account</a>
+    </div>
+  </div>
 {% endblock content %}
